@@ -1,18 +1,26 @@
 class Solution {
 public:
     bool isPossible(vector<int>& nums) {
-        multiset<int> l1, l2, l3;
-        for (int i : nums) {
-            if (l1.find(i - 1) != l1.end()) {
-                l1.erase(l1.find(i - 1)), l2.insert(i);
-            } else if (l2.find(i - 1) != l2.end()) {
-                l2.erase(l2.find(i - 1)), l3.insert(i);
-            } else if (l3.find(i - 1) != l3.end()) {
-                l3.erase(l3.find(i - 1)), l3.insert(i);
-            } else {
-                l1.insert(i);
-            }
+        map<int,int> m,m1;
+        for(int i=0;i<nums.size();i++){
+            m[nums[i]]++;
         }
-        return l1.empty() && l2.empty();
+        for(auto i :nums){
+            if(m[i]==0)
+                continue;
+            m[i]--;
+            if(m1[i-1]>0){
+                m1[i-1]--;
+                m1[i]++;
+            }
+            else if(m[i+1]!=0 && m[i+2]!=0){
+                m[i+1]--;
+                m[i+2]--;
+                m1[i+2]++;
+            }
+            else
+                return false;
+        }
+        return true;
     }
 };
