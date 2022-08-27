@@ -9,13 +9,13 @@ class Solution {
                         sums[i] += m[i][r];
                     }
                     set<int> s = {0};
-                    int run_sum = 0;
+                    int maxisum = 0;
                     for (int sum : sums) {
-                        run_sum += sum;
-                        auto it = s.lower_bound(run_sum - k);
+                        maxisum += sum;
+                        auto it = s.lower_bound(maxisum - k);
                         if (it != end(s))
-                            res = max(res, run_sum - *it);
-                        s.insert(run_sum);
+                            res = max(res, maxisum - *it);
+                        s.insert(maxisum);
                     }
                 }
             }
