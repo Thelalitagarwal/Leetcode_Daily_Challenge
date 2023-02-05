@@ -1,5 +1,6 @@
 class Solution {
 public:
+    
     string convert(string s, int numRows) {
         vector<vector<char>> a(numRows, vector<char>(s.size()));
         int row = 0, dir = true;
