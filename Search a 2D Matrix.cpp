@@ -8,7 +8,7 @@ Link to the complete Explaination Video ==>> https://youtu.be/mVv4IpBHpMo
 // 2 Approaches are attached in this please check wisely
 
 // 1st Method
-
+/*
 class Solution {
 public:    
     bool searchMatrix(vector<vector<int>>& mat, int target) {
@@ -25,10 +25,10 @@ public:
     }
 };
 
-
+*/
 // 2 Method
 
-/*
+
 class Solution {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
@@ -56,4 +56,4 @@ public:
     }
 };
 
-*/
+
