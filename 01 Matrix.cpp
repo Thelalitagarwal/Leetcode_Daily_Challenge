@@ -1,7 +1,7 @@
 /*
 Link to the " 01 Matrix " Problem ==>>  https://leetcode.com/problems/01-matrix/ 
    
-Link to the complete Explaination Video ==>> https://youtu.be/mlfJ7YpaPJM
+Link to the complete Explaination Video ==>> https://www.youtube.com/watch?v=lKOGVu8Hv0o
 
 */
 
