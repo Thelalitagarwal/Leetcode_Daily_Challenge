@@ -1,3 +1,5 @@
+#Link to vedio Solution: https://www.youtube.com/watch?v=CHurGpL3FA4
+#Link to Problem: https://leetcode.com/problems/counting-bits/?envType=daily-question&envId=2023-09-01
 class Solution {
 public:
     vector<int> countBits(int n) {
