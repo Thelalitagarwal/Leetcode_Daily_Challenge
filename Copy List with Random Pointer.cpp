@@ -1,3 +1,7 @@
+Link to the problem: https://leetcode.com/problems/copy-list-with-random-pointer/?envType=daily-question&envId=2023-09-05
+
+Link to the solution: https://www.youtube.com/watch?v=8TO0QghI6DM
+
 class Solution {
 public:
     Node* copyRandomList(Node* head) {
