@@ -1,3 +1,7 @@
+link to the problem: https://leetcode.com/problems/reverse-linked-list-ii/?envType=daily-question&envId=2023-09-07
+
+link to the solution: https://www.youtube.com/watch?v=71eUmoZtcHo
+
 class Solution {
 public:
     ListNode* reverseBetween(ListNode* head, int left, int right) {
