@@ -1,17 +1,32 @@
+link to the problem: https://leetcode.com/problems/pascals-triangle/description/?envType=daily-question&envId=2023-09-08
+
+link to the solution: https://www.youtube.com/watch?v=Ju7AbaCrMhs
+
 class Solution {
 public:
     vector<vector<int>> generate(int numRows) {
-        if (numRows == 0) return {};
-        if (numRows == 1) return {{1}};
-        
-        vector<vector<int>> prevRows = generate(numRows - 1);
-        vector<int> newRow(numRows, 1);
-        
-        for (int i = 1; i < numRows - 1; i++) {
-            newRow[i] = prevRows.back()[i - 1] + prevRows.back()[i];
+        vector<vector<int>> v;
+
+        v.push_back({1});
+
+        if(numRows == 1) {
+            return v;
         }
-        
-        prevRows.push_back(newRow);
-        return prevRows;
+
+        for (int i = 2; i <= numRows; i++) {
+
+            vector<int> curr(i);
+
+            curr[0] = 1;
+
+            curr[i-1] = 1;
+
+            for(int j = 1;j < v.back().size(); j++) {
+                curr[j] = v.back()[j-1] + v.back()[j];
+            }
+            
+            v.push_back(curr);
+        }
+        return v;
     }
 };
