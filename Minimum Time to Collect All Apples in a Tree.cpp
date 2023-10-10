@@ -8,11 +8,12 @@ Link to the complete Explaination Video ==>> https://youtu.be/ypaeip_tuDQ
 class Solution {
 public:
     vector<vector<int>> graph;
+    vector<bool> visited;
 
     int dfs(vector<bool>& hasApple,int node,int d,int prev){
         int result=0;
         int temp;
-        for(int &i:graph[node]){
+        if(i!=prev && !visited[i]){
             if(i!=prev){
                     temp=dfs(hasApple,i,d+1,node);
                     if(temp){
@@ -30,6 +31,7 @@ public:
     int minTime(int n, vector<vector<int>>& edges, vector<bool>& hasApple){
 
         graph.resize(n);
+        visited.resize(n,false);
         for(vector<int> &e:edges){
             graph[e[0]].push_back(e[1]);
             graph[e[1]].push_back(e[0]);
